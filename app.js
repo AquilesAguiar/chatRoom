@@ -33,5 +33,13 @@ io.on('connection',socket=>{
             apelido: data.apelido,
             mensagem:data.mensagem
         })
+        if(parseInt(data.apelido_atualizado_cliente) == 0){
+            socket.broadcast.emit('participantesParaCliente',{
+                apelido: data.apelido,
+            })
+            socket.emit('participantesParaCliente',{
+                apelido: data.apelido
+            })
+        }
     })
 })
