@@ -16,4 +16,5 @@ module.exports.conversas = function(app,req, res){
         {apelido:dados.apelido,mensagem:"Acabou de entrar no chat"}
     )
     return res.render("chat",{dados:dados})
+    
 }

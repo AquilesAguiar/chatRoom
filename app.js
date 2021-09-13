@@ -41,5 +41,6 @@ io.on('connection',socket=>{
                 apelido: data.apelido
             })
         }
+        
     })
 })
